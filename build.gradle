@@ -1,0 +1,48 @@
+plugins {
+    id 'java-library'
+}
+
+group 'com.kenstudio'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'org.slf4j:slf4j-api:1.7.9'
+    implementation 'ch.qos.logback:logback-classic:1.2.9'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+clean {
+    delete(file("./plugin/"+ rootProject.name + "-" + version + ".jar"))
+}
+
+jar {
+    compileJava.options.encoding = 'UTF-8'
+    compileTestJava.options.encoding = 'UTF-8'
+    manifest {
+        attributes(
+                "Implementation-Title": "Creo Making Example",
+                "Implementation-Version": "1.0",
+                "Main-Class": "DemoTest",
+        )
+    }
+
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+
+    destinationDirectory = file("./plugin")
+    archivesBaseName = rootProject.name
+    exclude "*.jar";
+    exclude "com/ptc/**"
+}

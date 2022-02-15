@@ -1,0 +1,16 @@
+KenDemo.label
+TestButton
+TestButton3
+#
+KenDemo.text
+TestButtonText
+TestButtonText3
+#
+KenDemo@2.label
+TestButton@2
+KenDemo@2label
+#
+KenDemo@2.text
+TestButtonText@2
+KenDemo@2.text
+#
