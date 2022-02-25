@@ -1,5 +1,5 @@
 name				creo_plugin
-startup				java
+startup				otk_java
 java_app_classpath	E:/software/repository/creo-plugin/creo-plugin/plugin/creo-plugin-1.0-SNAPSHOT.jar
 java_app_class		com.kenstudio.DemoTestMain
 java_app_start		start

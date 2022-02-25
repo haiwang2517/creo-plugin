@@ -1,4 +1,4 @@
-package com.kenstudio.config;
+package com.kenstudio.framework.config;
 
 import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.classic.joran.JoranConfigurator;
@@ -11,7 +11,7 @@ import java.io.InputStream;
 
 public class LoggerConfig {
 
-    public static void logbackConfiguration() {
+    public static void initialization() {
         try {
             LoggerContext context = (LoggerContext) LoggerFactory.getILoggerFactory();
             context.reset();

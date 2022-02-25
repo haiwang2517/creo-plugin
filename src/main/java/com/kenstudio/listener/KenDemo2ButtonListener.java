@@ -1,5 +1,6 @@
 package com.kenstudio.listener;
 
+import com.kenstudio.cos.COSConfig;
 import com.ptc.cipjava.jxthrowable;
 import com.ptc.pfc.pfcCommand.DefaultUICommandActionListener;
 import com.ptc.pfc.pfcSession.Session;
@@ -14,8 +15,9 @@ public class KenDemo2ButtonListener extends DefaultUICommandActionListener {
 
     public void commandListenerHandle() {
         try {
+            COSConfig config = new COSConfig();
             Session session =  pfcSession.GetCurrentSession();
-            session.UIShowMessageDialog("sssssssssss22", null);
+            session.UIShowMessageDialog(config.toString(), null);
         } catch (jxthrowable e) {
             e.printStackTrace();
         }

@@ -14,3 +14,15 @@ KenDemo@2.text
 TestButtonText@2
 KenDemo@2.text
 #
+uiInfo.label
+uiInfo@label
+uiInfo@label
+#
+uiInfo.text
+uiInfo@.text
+uiInfo@.text
+#
+Scud Setting Configuration
+Scud Setting Configuration
+SCUD设置
+#
